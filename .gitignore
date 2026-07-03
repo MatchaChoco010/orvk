@@ -1,0 +1,6 @@
+/target/
+/scratch/
+.serena/
+.claude/worktrees/
+.claude/settings.local.json
+scripts/node_modules/
