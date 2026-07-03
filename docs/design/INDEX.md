@@ -17,6 +17,7 @@
 | [0009](0009_surface-swapchain-present.md) | surface・swapchain・present | 2026-07-02 | ready for review | 中立 SurfaceSource(Win32 / Wayland)、present の DeviceConfig opt-in、決定的な swapchain 生成 plan、同期プリミティブの内包と acquire → 記録 → present の 3 口、世代管理付き再生成 |
 | [0010](0010_device-sharing-and-handoff.md) | Device 共有と cross-batch handoff | 2026-07-02 | ready for review | Arc&lt;Device&gt; 共有と publish / consume の 2 宣言、outstanding read 追跡による write-after-read と retire 寿命の担保、検知できる宣言漏れの表と検知の限界 |
 | [0011](0011_raw-escape-hatch.md) | raw Vulkan への escape hatch | 2026-07-02 | ready for review | unsafe な raw handle アクセサと raw record タスク、raw access 宣言(最保守)、責務移転の契約 7 項、ambient state 契約、dirty 申告による復帰、語彙昇格の運用 |
+| [0012](0012_windowing-crate.md) | windowing クレート orvk-window の新設 | 2026-07-03 | ready for review | window 生成・イベントループ・HDR / 広色域の出力能力観測と safe な surface 供給を担う別クレートを同リポジトリの workspace に新設。コアは windowing を知らないまま、0009 の unsafe 契約を所有側で safe 化する |
 
 ## 集計
 
@@ -24,10 +25,10 @@
 |---|---|
 | approved | 0 |
 | ai-approved | 0 |
-| ready for review | 11 |
+| ready for review | 12 |
 | draft | 0 |
 | rejected | 0 |
-| 合計 | 11 |
+| 合計 | 12 |
 
-0001〜0011 は同時作成の基盤設計セットであり、`ready for review` としてレビューを待っている。
+0001〜0011 は同時作成の基盤設計セット、0012 は windowing クレートの新設で、いずれも `ready for review` としてレビューを待っている。
 `draft` の運用は [README.md](README.md) の status 節を参照。
