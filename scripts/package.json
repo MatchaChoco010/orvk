@@ -1,0 +1,14 @@
+{
+  "name": "orvk-scripts",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "description": "orvk のエージェント向けワークフロー/ハーネススクリプト群 (Node.js)。",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "pr-comments": "node gh/pr-comments.mjs",
+    "pr-reply": "node gh/pr-reply.mjs"
+  }
+}
